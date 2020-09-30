@@ -3,7 +3,6 @@ import React from "react";
 export default function Weather(props) {
   if (props.data) {
     const { name, sys, main } = props.data;
-    console.log(main);
     return (
       <>
         <strong style={{ fontSize: "2em" }}>{Math.round(main.temp)}° C</strong>
@@ -31,7 +30,7 @@ export default function Weather(props) {
     return (
       <div>
         <svg
-          class="circle-loader progress"
+          className="circle-loader progress"
           width="40"
           height="40"
           version="1.1"

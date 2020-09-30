@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
+import credentials from "./credentials"; // Credentials data
+
 import Header from "./components/Header";
 import Weather from "./components/Weather";
 /* import Map from "./components/Map"; */
@@ -12,9 +14,9 @@ function App() {
   // When the component is mounted, updates the status fetching all data
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch(
-        "http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=996cbb1d5e875cb5b95daac84a9f1f55"
-      );
+      const city = "London";
+      const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${credentials.appId}`;
+      const data = await fetch(apiUrl);
       const convertedData = await data.json();
       setApiData(convertedData);
     };
