@@ -18,10 +18,12 @@ export default function Weather(props) {
             {main.humidity}%<p style={{ fontSize: "0.4em" }}>HUMIDITY</p>
           </div>
           <div style={{ float: "left", paddingLeft: "0.85em" }}>
-            {main.temp_max}° C<p style={{ fontSize: "0.4em" }}>MAX. TEMP</p>
+            {Math.round(main.temp_max)}° C
+            <p style={{ fontSize: "0.4em" }}>MAX. TEMP</p>
           </div>
           <div style={{ float: "left", paddingLeft: "0.85em" }}>
-            {main.temp_min}° C<p style={{ fontSize: "0.4em" }}>MIN. TEMP</p>
+            {Math.round(main.temp_min)}° C
+            <p style={{ fontSize: "0.4em" }}>MIN. TEMP</p>
           </div>
         </div>
       </>
