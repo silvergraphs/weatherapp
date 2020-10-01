@@ -2,10 +2,13 @@ import React from "react";
 
 export default function Weather(props) {
   if (props.data) {
+    // If the data was loaded, returns the component
     const { name, sys, main } = props.data;
+
     return (
       <>
         <strong style={{ fontSize: "2em" }}>{Math.round(main.temp)}° C</strong>
+        {/* I use Math.round to give rounded number temp */}
         <p style={{ fontSize: "0.8em", paddingBottom: "1em" }}>
           {name}, {sys.country}
         </p>
@@ -29,6 +32,7 @@ export default function Weather(props) {
       </>
     );
   } else {
+    // If the data is not loaded, shows an loading spinner
     return (
       <div>
         <svg

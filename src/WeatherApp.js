@@ -5,7 +5,7 @@ import credentials from "./credentials"; // Credentials data
 
 import Header from "./components/Header";
 import Weather from "./components/Weather";
-/* import Map from "./components/Map"; */
+import Map from "./components/Map";
 
 function App() {
   // State of the component where i save the data
@@ -28,7 +28,22 @@ function App() {
       <div className="App-content">
         <Header />
         <Weather data={apiData} />
-        {/* <Map /> */}
+        <Map
+          style={{ margin: `2em` }}
+          googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&key=${credentials.googleApiKey}`}
+          loadingElement={<div>Loading map</div>}
+          containerElement={
+            <div
+              style={{
+                width: `400px`,
+                height: `400px`,
+                padding: `0.7em 1em 1em 1em`,
+              }}
+            />
+          }
+          mapElement={<div style={{ height: `100%` }} />}
+          coords={apiData}
+        />
       </div>
     </div>
   );

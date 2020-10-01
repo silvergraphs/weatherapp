@@ -29,7 +29,8 @@ p {
 
 .App-content {
   background-color: #282c34;
-  padding-top: 4em;
+  padding-top: 2.7em;
+  padding-bottom: 2.7em;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
