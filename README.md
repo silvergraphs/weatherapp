@@ -53,3 +53,7 @@ For production
 ```
 npm run build
 ```
+
+## Used Libraries
+
+I only used `react-google-maps` for Google Map component adapted to React.
