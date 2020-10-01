@@ -26,7 +26,7 @@ npm install
 
 This app needs two API keys to work, OpenWeatherMap for weather data and Google Maps for map displaying.
 
-Those API Tokens can be changed on the `credentials.js` file.
+You need to create the `credentials.js` file and add them.
 
 ```js
 export default {
