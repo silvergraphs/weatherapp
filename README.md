@@ -1,4 +1,4 @@
-# Weather App (React Frontend)
+# Weather App 🌦 (React Frontend) 
 
 This app shows the weather of any desired location obtaining data from [WeatherApp API](https://github.com/silvergraphs/weatherapp-api).
 
@@ -13,7 +13,7 @@ The app shows:
 
 Temperature data is shown in Metrics units (Celcius).
 
-## Installation
+## Installation 🛠
 
 Clone the repository, install dependencies, and create the `config.js` file (see Configuration section).
 
@@ -22,7 +22,7 @@ git clone https://github.com/silvergraphs/weatherapp-front.git
 npm install
 ```
 
-## Configuration
+## Configuration 🔧
 
 This app works by default with [Weather App API](https://github.com/silvergraphs/weatherapp-api) but you can change the API Url in the config.js file, it can work with [OpenWeatherMap](https://openweathermap.org/).
 
@@ -43,7 +43,7 @@ You may obtain the API key here:
 
 - [Google Developer Console](https://console.developers.google.com/)
 
-## Usage
+## Usage 🖱
 
 For development
 
@@ -57,6 +57,6 @@ For production
 npm run build
 ```
 
-## Used Libraries
+## Used Libraries 📂
 
 I only used `react-google-maps` for Google Map component adapted to React.
