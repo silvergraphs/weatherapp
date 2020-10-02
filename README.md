@@ -1,6 +1,6 @@
-# Weather App
+# Weather App (React Frontend)
 
-This app shows the weather of an static ubication (London) from the OpenWeatherMap API.
+This app shows the weather of any desired location obtaining data from [WeatherApp API](https://github.com/silvergraphs/weatherapp-api).
 
 The app shows:
 
@@ -15,29 +15,32 @@ Temperature data is shown in Metrics units (Celcius).
 
 ## Installation
 
-Clone the repository, install dependencies, and change API keys in `credentials.js` (see Credentials section).
+Clone the repository, install dependencies, and create the `config.js` file (see Configuration section).
 
 ```
-git clone https://github.com/silvergraphs/weatherapp.git
+git clone https://github.com/silvergraphs/weatherapp-front.git
 npm install
 ```
 
-## Credentials
+## Configuration
 
-This app needs two API keys to work, OpenWeatherMap for weather data and Google Maps for map displaying.
+This app works by default with [Weather App API](https://github.com/silvergraphs/weatherapp-api) but you can change the API Url in the config.js file, it can work with [OpenWeatherMap](https://openweathermap.org/).
 
-You need to create the `credentials.js` file and add them.
+Also this app needs the Google API Key for Map component displaying.
+
+You need to create the `config.js` file and edit.
 
 ```js
-export default {
-  appId: "YOUR_API_KEY", // OpenWeatherMap API Key
-  googleApiKey: "YOUR_API_KEY", // Google JavaScript API Key
+const config = {
+  baseURL: "", // Leave blank to use WeatherApp API, or put OpenWeatherMap API URL here
+  gmapsKey: "YOUR_API_KEY", // Google JavaScript API Key
 };
+
+export default config;
 ```
 
-You may obtain the API keys here:
+You may obtain the API key here:
 
-- [OpenWeatherMap](https://home.openweathermap.org/api_keys)
 - [Google Developer Console](https://console.developers.google.com/)
 
 ## Usage
